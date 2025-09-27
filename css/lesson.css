@@ -1,0 +1,246 @@
+@charset "utf-8";
+
+/*==========================
+Lesson
+==========================*/
+.header_wrap {
+    background-image: url(../img/bg_dairiseki_beige.png);
+}
+
+.header_logo_txt {
+    color: var(--black);
+}
+
+.section_lesson {
+    padding-top: 46px;
+    padding-bottom: 128px;
+    background:
+        /* url(../img/inaho.png) no-repeat left 5.3% top -40px / clamp(100px, 15.2%, 220px), */
+        radial-gradient(rgba(200, 150, 150, .15) 2px, transparent 2px) 0 0 / 30px 30px repeat,
+        #fff;
+}
+
+.lesson_container {
+    margin-top: 56px;
+    position: relative;
+}
+
+.txt_container {
+    margin-inline: 5.3%;
+}
+
+/* .lesson_container::before {
+    content: '';
+    position: absolute;
+    background-image: url(../img/inaho.png);
+    background-repeat: no-repeat;
+    background-size: contain;
+    top: -40px;
+    left: 5.3%;
+    width: 15.2%;
+    transform: rotate(-12.303deg);
+    flex-shrink: 0;
+    aspect-ratio: 25/42;
+} */
+
+.lesson_ttl {
+    color: var(--darkblue);
+    font-family: "FOT-Cezanne ProN";
+    font-size: 2rem;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 1.6;
+}
+
+.lesson_txttop {
+    color: var(--black);
+    font-family: "Noto Sans JP";
+    font-size: 1.6rem;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 1.6;
+    margin-top: 18px;
+}
+
+/* Slick（横流し・正方形にトリミングする場合） */
+.slider {
+    width: 100%;
+    margin: 46px auto 0;
+}
+
+.slider .slick-slide {
+    margin-right: 8px;
+}
+
+.slider .slick-list {
+    margin-right: -8px;
+}
+
+.slider img {
+    display: block;
+    width: 100%;
+    aspect-ratio: 1 / 1;
+    object-fit: cover;
+    height: auto;
+}
+
+.is-resizing .slick-track {
+    transition: none !important;
+}
+
+
+.normal_btn {
+    margin-top: 32px;
+}
+
+.normal_btn::before {
+    content: "";
+    display: inline-block;
+    color: var(--darkblue);
+    width: 12px;
+    height: 12px;
+    border-right: 1px solid var(--darkblue);
+    border-bottom: 1px solid var(--darkblue);
+    transform: rotate(-45deg);
+    transform-origin: center;
+    margin-right: 21px;
+}
+
+.lesson_txtbelow {
+    color: var(--black);
+    font-family: "Noto Sans JP";
+    font-size: 1.6rem;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 1.6;
+    margin-top: 46px;
+    margin-inline: 5.3%;
+}
+
+.lesson_bigimg {
+    border-radius: 0 50px;
+    background: url(<path-to-image>) lightgray 50% / cover no-repeat;
+    width: 89.3%;
+    display: block;
+    margin: 46px auto 0;
+}
+
+.lesson_btntxt {
+    color: var(--darkblue);
+    text-align: center;
+    font-family: "Noto Sans JP";
+    font-size: 1.6rem;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 1.6;
+    margin-top: 46px;
+}
+
+.lesson_btntxt:nth-of-type(2) {
+    margin-top: 12px;
+}
+
+
+@media (min-width: 768px) {
+    .section_lesson {
+        background-position:
+            left 8.3% top -50px,
+            /* 稲穂 */
+            0 0,
+            /* ドット */
+            0 0;
+        /* 背景色（位置は意味なしだが3層揃え） */
+    }
+
+    .lesson_container {
+        margin-top: 116px;
+        background-color: #fff;
+        background-image: radial-gradient(rgba(200, 150, 150, 0.15) 2px, transparent 2px);
+        background-size: 30px 30px;
+        position: relative;
+    }
+
+    .txt_container {
+        margin-inline: 8.3%;
+    }
+
+    /* .lesson_container::before {
+        content: '';
+        position: absolute;
+        background-image: url(../img/inaho.png);
+        background-repeat: no-repeat;
+        background-size: contain;
+        top: -40px;
+        left: 5.3%;
+        width: 15.2%;
+        transform: rotate(-12.303deg);
+        flex-shrink: 0;
+        aspect-ratio: 25/42;
+    } */
+
+    .lesson_ttl {
+        font-size: 2.4rem;
+    }
+
+    .lesson_txttop {
+        font-size: 1.8rem;
+        margin-top: 24px;
+    }
+
+    .slider .slick-slide {
+        margin-right: 12px;
+        height: auto !important;
+    }
+
+    .slider .slick-list {
+        margin-right: -12px;
+    }
+
+    .contact_btn {
+        margin: 96px auto 0;
+    }
+
+    .contact_btn::before {
+        content: "";
+        display: inline-block;
+        color: var(--darkblue);
+        width: 12px;
+        height: 12px;
+        border-right: 1px solid var(--darkblue);
+        border-bottom: 1px solid var(--darkblue);
+        transform: rotate(-45deg);
+        transform-origin: center;
+        margin-right: 21px;
+    }
+
+    .lesson_txtbelow {
+        font-size: 1.8rem;
+        margin-top: 64px;
+        margin-inline: 8.3%;
+    }
+
+    .spBr {
+        display: none;
+    }
+
+    .lesson_bigimg {
+        border-radius: 0 50px;
+        background: url(<path-to-image>) lightgray 50% / cover no-repeat;
+        width: 89.3%;
+        display: block;
+        margin: 46px auto 0;
+    }
+
+    .normal_btntxt {
+        font-size: 1.8rem;
+        margin-top: 96px;
+    }
+
+    .normal_btntxt:last-of-type {
+        margin: 0;
+    }
+
+    .normal_btn {
+        margin-top: 46px;
+    }
+}

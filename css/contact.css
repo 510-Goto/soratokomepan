@@ -1,0 +1,29 @@
+@charset "utf-8";
+
+/*==========================
+contact
+==========================*/
+.contact_txt {
+    color: var(--black);
+    font-family: "Noto Sans JP";
+    font-size: 1.6rem;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 1.6;
+    margin: 46px 5.3%;
+}
+
+.formmailer-embed {
+    margin-inline: 5.3%;
+}
+
+@media (min-width: 768px) {
+    .contact_txt {
+        font-size: 1.8rem;
+        margin: 116px 8.3%;
+    }
+    
+    .formmailer-embed {
+        margin-inline: 8.3%;
+    }
+}

@@ -1,0 +1,755 @@
+@charset "utf-8";
+
+/*========================== 
+common 
+==========================*/
+:root {
+    --darkblue: #012F7B;
+    --rightblue: #3DA9FC;
+    --skyblue: #EEF8FF;
+    --black: #46484C;
+    --rightgray: #F6F6F6;
+    --beige: #F7F6F3;
+    --white: #fff;
+    --link-hover: #F6AD55;
+    --link-active: #EAA858;
+    --link-hover2: #D5EEFF;
+    --contentPadding: 89.3%;
+}
+
+html {
+    font-size: 62.5%;
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'FOT-Cezanne ProN', 'Noto Sans JP', Arial, sans-serif;
+    font-size: 1.6rem;
+    font-style: normal;
+    color: var(--black);
+    background-color: #fff;
+}
+
+html,
+body {
+    overflow-x: hidden;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+.section_ttl {
+    color: var(--rightblue);
+    text-align: center;
+    font-family: "FOT-Cezanne ProN";
+    font-size: 2rem;
+    font-weight: 400;
+    margin-top: 64px;
+}
+
+.en {
+    color: var(--darkblue);
+    font-size: 3.2rem;
+    line-height: 1.6;
+    font-style: normal;
+    font-weight: 400;
+}
+
+.subTtl {
+    color: #FFF;
+    text-align: center;
+    font-weight: 500;
+    line-height: 1.6;
+}
+
+.p {
+    color: var(--black);
+    font-family: "Noto Sans JP";
+    font-size: 1.8rem;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 1.6;
+}
+
+@media (min-width: 768px) {
+    .section_ttl {
+        font-size: 2.1rem;
+        margin-top: 96px;
+    }
+
+    .en {
+        font-size: 5.6rem;
+    }
+
+    .subttl {
+        font-size: 2.4rem;
+    }
+}
+
+/* .nav */
+.header {
+    background-image: url(../img/bg_dairiseki_skyblue.png);
+}
+
+.header_wrap {
+    background-image: url(../img/bg_dairiseki_skyblue.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+/* ===== ヘッダー ===== */
+.header_area {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    padding: 18px 5.6%;
+    margin: 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: transparent;
+    z-index: 200;
+    /* navより下に設定（navは1200） */
+    isolation: isolate;
+}
+
+/* 背景は ::before。既定=見える */
+.header_area::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background-image: url(../img/bg_dairiseki_skyblue.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    opacity: 1;
+    transition: opacity .5s ease;
+    z-index: 0;
+    pointer-events: none;
+}
+
+.header_area>* {
+    position: relative;
+    z-index: 1;
+}
+
+.header_logo_txt {
+    color: var(--darkblue);
+    font-family: "FOT-Cezanne ProN";
+    font-size: 1.8rem;
+    font-weight: 400;
+    line-height: 1.6;
+    opacity: 1;
+    transition: opacity .5s ease;
+}
+
+/* ハンバーガーは常時右上（SP/タブレット） */
+.btn_hamburger {
+    position: fixed;
+    top: 20px;
+    right: 5.6%;
+    z-index: 1201;
+    pointer-events: auto;
+}
+
+/* --- ホームだけ：初期非表示／スクロール後に表示 --- */
+.is-home .header_area::before {
+    opacity: 0;
+}
+
+.is-home .header_logo_txt {
+    opacity: 0;
+}
+
+.is-home.after-hero .header_area::before {
+    opacity: 1;
+}
+
+.is-home.after-hero .header_logo_txt {
+    opacity: 1;
+}
+
+/* ===== ハンバーガーUI ===== */
+.drawer_hidden {
+    display: none;
+}
+
+.drawer_open {
+    display: flex;
+    width: 22px;
+    height: 20.533px;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    z-index: 1300;
+    cursor: pointer;
+}
+
+.drawer_open span,
+.drawer_open span:before,
+.drawer_open span:after {
+    content: '';
+    display: block;
+    height: 1px;
+    width: 22px;
+    border-radius: 3px;
+    background: #012F7B;
+    transition: 0.5s;
+    position: absolute;
+}
+
+.drawer_open span:before {
+    bottom: 8px;
+}
+
+.drawer_open span:after {
+    top: 8px;
+}
+
+/* メニュー（オーバーレイ） */
+.nav {
+    box-shadow: 4px 0 8px rgba(70, 72, 76, 0.2);
+    outline: solid 2px var(--darkblue);
+    outline-offset: -12px;
+    background-image: url(../img/bg_dairiseki_skyblue.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: fixed;
+    inset: 0;
+    /* 画面フル */
+    z-index: 1200;
+    /* ← ヘッダーより上に */
+    transform: translateX(100%);
+    /* 右へ退避 */
+    transition: transform .80s ease;
+    overflow-y: auto;
+    /* navだけスクロール */
+    -webkit-overflow-scrolling: touch;
+    overscroll-behavior: contain;
+}
+
+.header:has(#drawer_input:checked) .nav {
+    transform: translateX(0);
+}
+
+body:has(#drawer_input:checked) {
+    overflow: hidden;
+}
+
+.header:has(#drawer_input:checked)~.main,
+.header:has(#drawer_input:checked)~.footer {
+    overscroll-behavior: contain;
+}
+
+.header:has(#drawer_input:checked) .header_area {
+    pointer-events: none;
+}
+
+.header:has(#drawer_input:checked) .btn_hamburger,
+.header:has(#drawer_input:checked) .drawer_open {
+    pointer-events: auto;
+}
+
+.nav_top {
+    margin: 49px auto 0;
+    padding-inline: 16px;
+    inline-size: fit-content;
+    max-inline-size: 100%;
+    text-align: center;
+}
+
+.nav_logo_blue {
+    display: block;
+    margin: 0 auto;
+    width: 95px;
+    height: 74px;
+    inline-size: clamp(72px, 24vw, 95px);
+    block-size: auto;
+}
+
+.nav_logo_txt {
+    color: var(--darkblue);
+    text-align: center;
+    font-family: "FOT-Cezanne ProN";
+    font-size: clamp(18px, 6vw, 22px);
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    margin-top: 22px;
+    white-space: nowrap;
+}
+
+.nav_content {
+    margin-top: 42px;
+}
+
+.nav_list {
+    display: block;
+    margin: 42px 0 0 23.4%;
+}
+
+.menu_list {
+    color: var(--darkblue);
+    font-family: 'Noto Sans JP';
+    font-size: 1.6rem;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 1.6;
+    margin-top: 16px;
+}
+
+.menu_list a {
+    display: block;
+    text-decoration: none;
+}
+
+.nav li a:hover {
+    color: var(--link-hover);
+}
+
+.menu_list_btn {
+    padding: 6px 20px;
+    margin: 0 22.6%;
+    background-color: var(--white);
+    border: 1px solid var(--darkblue);
+    border-radius: 5px;
+    display: inline-flex;
+    align-items: center;
+    gap: 12px;
+    color: var(--darkblue);
+    font-family: "FOT-Cezanne ProN";
+    font-size: 1.6rem;
+    line-height: 1.6;
+    margin-top: 24px;
+    font-weight: 400;
+}
+
+.menu_list_btn::before {
+    content: "";
+    display: inline-block;
+    color: var(--darkblue);
+    width: 6px;
+    height: 6px;
+    border-right: 1px solid var(--darkblue);
+    border-bottom: 1px solid var(--darkblue);
+    transform: rotate(-45deg);
+    transform-origin: center;
+}
+
+.menu_list_btn:hover {
+    background-color: var(--link-hover);
+    border: 1px solid var(--white);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    transition: .2s;
+    color: var(--white);
+}
+
+.menu_list_btn:hover::before {
+    border-color: var(--white);
+    transition: .2s;
+}
+
+.menu_list_btn:active {
+    background-color: var(--link-active);
+}
+
+.nav_info {
+    margin-left: 22.6%;
+    margin-top: 32px;
+}
+
+.tel,
+.time {
+    color: var(--darkblue);
+    font-family: "Noto Sans JP";
+    font-size: 1.4rem;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 1.6;
+    margin-top: 7px;
+}
+
+.nav_banner {
+    background-color: var(--skyblue);
+    padding: 12px 19px;
+    margin: 24px 18.4% 0;
+    box-shadow: 2px 2px 4px 0 rgba(0, 0, 0, 0.25);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.nav_btn_txt {
+    color: var(--darkblue);
+    font-family: "Noto Sans JP";
+    font-size: 1.4rem;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 1.6;
+}
+
+.nav_btn_img {
+    width: 52px;
+    height: 52px;
+    flex-shrink: 0;
+}
+
+.nav_banner:hover,
+.nav_banner:active {
+    background-color: var(--link-hover2);
+    transition: .2s;
+    border-radius: 50px;
+}
+
+/* ハンバーガー × 変形 */
+#drawer_input:checked~.drawer_open span {
+    background: rgba(255, 255, 255, 0);
+}
+
+#drawer_input:checked~.drawer_open span::before {
+    bottom: 0;
+    transform: rotate(45deg);
+}
+
+#drawer_input:checked~.drawer_open span::after {
+    top: 0;
+    transform: rotate(-45deg);
+}
+
+/* ==========================
+   PCレイアウト（左サイド固定）
+   1025px以上
+========================== */
+@media (min-width: 1025px) {
+
+    .btn_hamburger,
+    .drawer_open,
+    #drawer_input {
+        display: none !important;
+    }
+
+    .header_area {
+        display: none;
+    }
+
+    /* PCはサイドバーのみ */
+
+    .nav {
+        position: fixed !important;
+        inset: auto;
+        top: 0;
+        left: 0;
+        bottom: 0;
+        width: 300px;
+        transform: none !important;
+        transition: none !important;
+        z-index: 1200;
+        /* PCでも最前面（ただし重なりは気にならない） */
+        overflow-y: auto;
+        -webkit-overflow-scrolling: touch;
+    }
+
+    body:has(#drawer_input:checked) {
+        overflow: auto !important;
+    }
+
+    .header:has(#drawer_input:checked)~.main,
+    .header:has(#drawer_input:checked)~.footer {
+        overscroll-behavior: auto !important;
+    }
+
+    body {
+        margin-left: 300px;
+    }
+
+    .main_img_content,
+    .main {
+        padding-left: 0;
+    }
+
+    .nav_top {
+        margin: 60px auto 0;
+        padding-inline: 24.3%;
+    }
+
+    .nav_logo_txt {
+        color: var(--darkblue);
+        text-align: center;
+        font-family: "FOT-Cezanne ProN";
+        font-size: 2.2rem;
+        font-style: normal;
+        font-weight: 400;
+        line-height: normal;
+    }
+
+    .nav_content {
+        margin-top: 24px;
+    }
+
+    .nav_list {
+        padding-inline: 49px;
+        margin: 0 auto;
+    }
+
+    .menu_list {
+        margin-top: 16px;
+    }
+
+    .menu_list:first-of-type {
+        margin-top: 42px;
+    }
+
+    .menu_list a {
+        display: block;
+    }
+
+    .menu_list_btn {
+        margin: 32px 48px 0;
+        width: auto;
+    }
+
+    .menu_list_btn::before {
+        content: "";
+        display: inline-block;
+        color: var(--darkblue);
+        width: 6px;
+        height: 6px;
+        border-right: 1px solid var(--darkblue);
+        border-bottom: 1px solid var(--darkblue);
+        transform: rotate(-45deg);
+        transform-origin: center;
+    }
+
+    .nav_info {
+        margin-left: 48px;
+        margin-top: 24px;
+    }
+
+    .nav_banner {
+        margin: 32px 31.5px;
+    }
+}
+
+/* product_btn */
+.normal_btn {
+    display: block;
+    background-color: #fff;
+    border-radius: 5px;
+    border: 2px solid var(--darkblue);
+    padding: 14px 0 13px;
+    margin: 96px auto 0;
+    text-align: center;
+    color: var(--darkblue);
+    text-align: center;
+    font-family: "Noto Sans JP";
+    font-size: 2rem;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 1.6;
+    width: 335px;
+}
+
+.normal_btn::before {
+    content: "";
+    display: inline-block;
+    color: var(--darkblue);
+    width: 12px;
+    height: 12px;
+    border-right: 1px solid var(--darkblue);
+    border-bottom: 1px solid var(--darkblue);
+    transform: rotate(-45deg);
+    transform-origin: center;
+    margin-right: 21px;
+}
+
+.normal_btn:hover {
+    background-color: var(--link-hover);
+    border: 2px solid var(--white);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    transition: .2s;
+    color: var(--white);
+}
+
+.normal_btn:hover::before {
+    border-color: var(--white);
+    transition: .2s;
+}
+
+.normal_btn:active {
+    background-color: var(--link-active);
+}
+
+
+@media (max-width: 370px) {
+    .normal_btn {
+        width: calc(100% - 10.6%);
+        margin-inline: 5.3%;
+    }
+}
+
+@media (min-width: 768px) {
+    .normal_btn {
+        margin: 96px auto 0;
+    }
+}
+
+/* footer */
+.footer {
+    position: relative;
+    background: var(--skyblue);
+    padding: 30px 0 24px;
+}
+
+.footer::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: -30px;
+    width: 100%;
+    height: 30px;
+    background: radial-gradient(circle at 30px 30px, var(--skyblue) 30px, transparent 31px) repeat-x;
+    background-size: 60px 60px;
+    pointer-events: none;
+}
+
+.footer_ttl {
+    color: var(--darkblue);
+    text-align: center;
+    font-family: "FOT-Cezanne ProN";
+    font-size: 3.2rem;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+}
+
+.footer_sns {
+    display: flex;
+    gap: 14.7%;
+    align-items: center;
+    justify-content: center;
+    margin: 24px 25% 0;
+}
+
+.footer_sns a {
+    flex-shrink: 0;
+    aspect-ratio: 1/1;
+    width: 23%;
+}
+
+.footer_btn {
+    width: 100%;
+    height: 100%;
+    display: block;
+    object-fit: contain;
+}
+
+.top {
+    display: none;
+}
+
+.top_lesson {
+    display: none;
+}
+
+@media (min-width: 768px) {
+    .footer_ttl {
+        font-size: 4.2rem;
+    }
+
+    .footer_sns {
+        display: flex;
+        gap: 14.7%;
+        margin: 72px 40.2% 0;
+    }
+
+    .footer_sns a {
+        width: 23.4%;
+    }
+
+    .top {
+        display: block;
+        background-image: url(../img/bg_dairiseki_skyblue.png);
+        padding: 64px 0;
+        text-align: center;
+    }
+
+    .top_lesson {
+        display: block;
+        background-image: url(../img/bg_dairiseki_beige.png);
+        padding: 64px 0;
+        text-align: center;
+    }
+
+    .top p,
+    .top_lesson p {
+        color: var(--darkblue);
+        text-align: center;
+        font-family: "FOT-Cezanne ProN";
+        font-size: 4.2rem;
+        font-style: normal;
+        font-weight: 400;
+        line-height: normal;
+    }
+}
+
+/* 注意事項 */
+.caution_txtarea {
+    margin: 46px 5.3% 0;
+    padding: 27px 9.4%;
+    background-color: var(--rightgray);
+    border: 1px solid var(--darkblue);
+}
+
+.caution_ttl {
+    color: var(--darkblue);
+    font-family: "FOT-Cezanne ProN";
+    font-size: 2rem;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 1.6;
+}
+
+.caution_txt {
+    color: var(--black);
+    font-family: "Noto Sans JP";
+    font-size: 1.6rem;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 1.6;
+    margin-top: 12px;
+}
+
+.copy {
+    color: var(--darkblue);
+    text-align: center;
+    font-family: "Noto Sans JP";
+    font-size: 1.2rem;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 1.6;
+    margin-top: 54px;
+}
+
+@media (min-width: 768px) {
+    .caution_txtarea {
+        margin: 116px 4.2%;
+        padding: 27px 3.5%;
+    }
+
+    .caution_ttl {
+        font-size: 2.4rem;
+    }
+
+    .caution_txt {
+        font-size: 1.8rem;
+        margin-top: 24px;
+    }
+
+    .copy {
+        margin-top: 42px;
+    }
+}

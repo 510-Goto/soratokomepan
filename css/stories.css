@@ -1,0 +1,229 @@
+@charset "utf-8";
+
+/*==========================
+stories
+==========================*/
+.section--stories {
+    padding-top: 46px;
+}
+
+.stories_container {
+    margin-inline: 5.3%;
+    margin-top: 46px;
+}
+
+.stories_ttl {
+    color: var(--darkblue);
+    font-family: "FOT-Cezanne ProN";
+    font-size: 1.8rem;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 1.6;
+}
+
+.stories_txt {
+    color: var(--black);
+    font-family: "Noto Sans JP";
+    font-size: 1.6rem;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 1.6;
+    margin-top: 8px;
+}
+
+.stories_txt:first-of-type {
+    margin-top: 12px;
+}
+
+@media (min-width: 768px) {
+    .stories_container {
+        margin-inline: 8.3%;
+        margin-top: 116px;
+    }
+
+    .stories_container:nth-of-type(2) {
+        margin-top: 64px;
+        margin-bottom: 64px;
+    }
+
+    .stories_ttl {
+        font-size: 2.4rem;
+    }
+
+    .stories_txt {
+        font-size: 1.8rem;
+        margin-top: 12px;
+    }
+    
+    .stories_txt:nth-of-type(1) {
+        margin-top: 24px;
+    }
+}
+
+.lesson_container {
+    margin-top: 96px;
+    padding: 46px 5.3% 128px;
+    background:
+    radial-gradient(rgba(200, 150, 150, .15) 2px, transparent 2px) 0 0/15px 15px #fff;
+}
+
+.txt_container {
+    margin: 0;
+}
+
+.lesson_img {
+    display: block;
+    width: clamp(286px, 100%, 380px);
+    height: auto;
+    margin: 0 auto;
+    margin-top: 32px;
+}
+
+.lesson_container::before {
+    content: '';
+    position: absolute;
+    background-image: url(../img/inaho.png);
+    background-repeat: no-repeat;
+    background-size: contain;
+    top: -40px;
+    left: 5.3%;
+    width: 15.2%;
+    transform: rotate(-12.3deg);
+    flex-shrink: 0;
+    aspect-ratio: 25/42;
+}
+
+.lesson_ttl {
+    color: var(--darkblue);
+    font-family: "FOT-Cezanne ProN";
+    font-size: 2rem;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 1.6;
+}
+
+.lesson_txttop {
+    color: var(--black);
+    font-family: "Noto Sans JP";
+    font-size: 1.6rem;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 1.6;
+    margin-top: 18px;
+}
+
+.lesson_txtbelow {
+    color: var(--black);
+    font-family: "Noto Sans JP";
+    font-size: 1.6rem;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 1.6;
+    margin-top: 46px;
+}
+
+.lesson_btn {
+    display: block;
+    background-color: #fff;
+    border-radius: 5px;
+    border: 2px solid var(--darkblue);
+    padding: 14px 0 13px;
+    margin: 46px auto 0;
+    text-align: center;
+    color: var(--darkblue);
+    text-align: center;
+    font-family: "Noto Sans JP";
+    font-size: 2rem;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 1.6;
+    width: 335px;
+}
+
+.lesson_btn::before {
+    content: "";
+    display: inline-block;
+    color: var(--darkblue);
+    width: 12px;
+    height: 12px;
+    border-right: 1px solid var(--darkblue);
+    border-bottom: 1px solid var(--darkblue);
+    transform: rotate(-45deg);
+    transform-origin: center;
+    margin-right: 21px;
+}
+
+@media (min-width: 768px) {
+    .lesson_container {
+        margin: 0;
+        padding: 105px 0 160px;
+    }
+
+    .lesson_box {
+        margin: 0;
+        display: flex;
+        align-items: start;
+        justify-content: space-between;
+    }
+
+    .txt_container {
+        margin-left: 8.3%;
+        margin-right: 40px;
+    }
+
+    .lesson_img {
+        width: 100%;
+        height: 272px;
+        object-fit: cover;
+        display: inline-block;
+        text-align: right;
+        border-radius: 30px 0 0 30px;
+    }
+    
+    .lesson_btn {
+        margin: 0;
+        margin-top: 64px;
+        font-size: 2rem;
+        text-align: center;
+    }
+
+    .lesson_box {
+        display: grid;
+        grid-template-columns: auto auto;
+        gap: 8%;
+    }
+
+    .lesson_container::before {
+        top: -5.9%;
+        left: 2.1%;
+        width: 8.6%;
+    }
+
+    .lesson_ttl {
+        font-size: 2.4rem;
+    }
+
+    .lesson_txttop {
+        font-size: 1.8rem;
+        margin-top: 12px;
+    }
+
+    .lesson_btn::before {
+        content: "";
+        display: inline-block;
+        color: var(--darkblue);
+        width: 12px;
+        height: 12px;
+        border-right: 1px solid var(--darkblue);
+        border-bottom: 1px solid var(--darkblue);
+        transform: rotate(-45deg);
+        transform-origin: center;
+        margin-right: 21px;
+    }
+}
+
+@media (max-width: 370px) {
+    .lesson_btn {
+        width: calc(100% - 5.6%);
+    }
+}

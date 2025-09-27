@@ -1,0 +1,929 @@
+@charset "utf-8";
+
+/*==========================
+header
+==========================*/
+.fv {
+    position: relative;
+}
+
+.fv::after {
+    content: '';
+    position: absolute;
+    display: block;
+    background-color: var(--darkblue);
+    width: 2px;
+    height: 32px;
+    bottom: 0;
+    left: 50%;
+    transform: translate(-50%, 50%);
+}
+
+.img_sp_top {
+    width: 100vw;
+    height: auto;
+    aspect-ratio: 563/843;
+    overflow: hidden;
+}
+
+.img_pc_top {
+    display: none;
+}
+
+.fv_logo {
+    display: block;
+    width: 100%;
+    position: absolute;
+    top: 11.9%;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.main_img_logo {
+    width: clamp(110px, 41.87vw, 147px);
+    height: auto;
+    display: block;
+    margin-inline: auto;
+    max-width: 100%;
+    opacity: 0.65;
+}
+
+.main_img_txt {
+    color: var(--white);
+    text-align: center;
+    font-family: "FOT-Cezanne ProN";
+    font-size: 2.4rem;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    margin-top: 7.4%
+}
+
+/* pc */
+@media (min-width: 768px) {
+    .fv {
+        position: relative;
+    }
+
+    .fv::after {
+        content: '';
+        position: absolute;
+        display: block;
+        background-color: var(--darkblue);
+        width: 2px;
+        height: 50px;
+        bottom: 0;
+        left: 50%;
+        transform: translate(-50%, 50%);
+    }
+
+    .img_pc_top {
+        display: block;
+        width: 100%;
+        height: auto;
+        aspect-ratio: 1706/962;
+        position: relative;
+    }
+
+    .img_sp_top {
+        display: none;
+    }
+
+    .fv_logo {
+        display: block;
+        width: 100%;
+        position: absolute;
+        top: 18%;
+        left: 50%;
+        transform: translateX(-50%);
+        margin: 0;
+    }
+
+    .main_img_logo {
+        display: none;
+    }
+
+    .main_img_txt {
+        color: #FFF;
+        font-size: 4.2rem;
+        margin-top: 0;
+    }
+}
+
+/*==========================
+about
+==========================*/
+#about {
+    padding-top: 72px;
+}
+
+.catch {
+    color: var(--darkblue);
+    text-align: center;
+    font-family: "FOT-Cezanne ProN";
+    font-size: 1.8rem;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 1.6;
+}
+
+.section_ttl--about {
+    margin-top: 62px;
+}
+
+.section_txt {
+    color: var(--black);
+    font-family: "Noto Sans JP";
+    font-size: 1.8rem;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 1.6;
+    margin: 0 5.3%;
+    margin-top: 46px;
+}
+
+.section_txt p {
+    margin-top: 29px;
+}
+
+.btnarea_stories {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-end;
+    margin-right: 5.3%;
+    margin-top: 24px;
+    gap: 8px;
+}
+
+.btn_stories {
+    color: var(--darkblue);
+    font-family: "Noto Sans JP";
+    font-size: 2.4rem;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 1.6;
+    text-align: center;
+}
+
+.arrow {
+    position: relative;
+    display: inline-block;
+    width: 24px;
+    height: 1px;
+    margin-top: 0px;
+    border-radius: 9999px;
+    background-color: var(--darkblue);
+    transform: translateY(2px);
+}
+
+.arrow::after {
+    content: "";
+    position: absolute;
+    top: calc(50% - 1px);
+    right: 0;
+    width: 8px;
+    height: 1px;
+    border-radius: 9999px;
+    background-color: var(--darkblue);
+    transform: rotate(45deg);
+    transform-origin: calc(100% - 1px) 50%;
+}
+
+.about_img {
+    width: 100%;
+    height: 150px;
+    background-image: url(../img/top_interior2.png);
+    background-attachment: fixed;
+    background-size: cover;
+    background-position: right 30%;
+    background-repeat: no-repeat;
+    aspect-ratio: 10/3;
+    object-fit: cover;
+    object-position: center 60%;
+    display: block;
+    margin-top: 96px;
+}
+
+#happiness {
+    padding: 46px 0;
+    background-color: var(--skyblue);
+}
+
+.happiness_txt {
+    color: var(--black);
+    font-family: "Noto Sans JP";
+    font-size: 1.8rem;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 1.6;
+    padding-top: 46px;
+    margin-inline: 5.3%;
+    text-align: center;
+}
+
+.goodpoint_ttl {
+    color: var(--darkblue);
+    text-align: center;
+    font-family: "Noto Sans JP";
+    font-size: 2rem;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 1.6;
+    margin-top: 61px;
+    margin-inline: clamp(25px, 21.7vw, 82px);
+}
+
+.goodpoint_list {
+    margin-inline: 5%;
+}
+
+.goodpoint_list_card {
+    background-color: #FFF;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    border-radius: 30px;
+    padding: 24px 5.3%;
+    margin-top: 12px;
+}
+
+.goodpoint_card_ttl {
+    color: var(--darkblue);
+    font-family: "Noto Sans JP";
+    font-size: 2rem;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 1.6;
+}
+
+.goodpoint_card_ttl::before {
+    content: "";
+    display: inline-block;
+    background: url(../img/riceicon.png);
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+    width: 15px;
+    height: 20.778px;
+    flex-shrink: 0;
+    aspect-ratio: 15.00/20.78;
+    margin-right: 12px;
+}
+
+.goodpoint_card_txt {
+    color: var(--black);
+    font-family: "Noto Sans JP";
+    font-size: 1.6rem;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 1.6;
+    margin-top: 8px;
+}
+
+.delicious {
+    padding-bottom: 64px;
+}
+
+.delicious_ttl {
+    color: var(--darkblue);
+    text-align: center;
+    font-family: "Noto Sans JP";
+    font-size: 2rem;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 1.6;
+    margin-top: 59px;
+}
+
+.delicious_txt {
+    color: var(--black);
+    font-family: "Noto Sans JP";
+    font-size: 1.6rem;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 1.6;
+    margin-top: 32px;
+    margin-inline: 5.2%;
+}
+
+.three-squares_PC {
+    display: none;
+}
+
+.three-squares_SP {
+    margin-top: 64px;
+}
+
+.sq_SP {
+    display: grid;
+    grid-template-columns: clamp(150px, 44vw, 320px) 1fr;
+    /* 左=画像 / 右=テキスト */
+    grid-auto-rows: clamp(150px, 44vw, 320px);
+    /* 行の高さを画像サイズに固定 */
+    align-items: center;
+    /* テキストを縦中央に */
+    column-gap: 16px;
+    margin: 0;
+    padding: 0;
+}
+
+/* 2枚目は左右を反転（右=画像） */
+.sq2_SP {
+    grid-template-columns: 1fr clamp(150px, 44vw, 320px);
+}
+
+.sq_SP p {
+    font-family: "Noto Sans JP";
+    color: var(--black);
+    text-align: left;
+    font-size: 1.6rem;
+    line-height: 1.6;
+    margin: 0;
+}
+
+.sq_SP img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    aspect-ratio: 1 / 1;
+    display: block;
+    flex-shrink: 0;
+}
+
+.img_sq1_SP,
+.img_sq3_SP {
+    border-radius: 0 30% 30% 0;
+}
+
+.img_sq2_SP {
+    border-radius: 30% 0 0 30%;
+}
+
+/* テキスト */
+.sq_SP p {
+    margin: 0;
+    padding-inline: 12px;
+    font-family: "Noto Sans JP";
+    color: var(--black);
+    font-size: 1.6rem;
+    line-height: 1.6;
+    text-align: left;
+    display: flex;
+    align-items: center;
+    min-inline-size: 0;
+}
+
+
+
+.eat_area {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-end;
+    margin-right: 5.3%;
+    margin-top: 46px;
+    gap: 8px;
+}
+
+.eat {
+    color: var(--darkblue);
+    font-family: "Noto Sans JP";
+    font-size: 2rem;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 1.6;
+    text-align: right;
+}
+
+.arrow {
+    position: relative;
+    display: inline-block;
+    width: 24px;
+    height: 1px;
+    margin-top: 0px;
+    border-radius: 9999px;
+    background-color: var(--darkblue);
+    transform: translateY(2px);
+}
+
+.arrow::after {
+    content: "";
+    position: absolute;
+    top: calc(50% - 1px);
+    right: 0;
+    width: 8px;
+    height: 1px;
+    border-radius: 9999px;
+    background-color: var(--darkblue);
+    transform: rotate(45deg);
+    transform-origin: calc(100% - 1px) 50%;
+}
+
+@media (min-width: 501px) {
+    .three-squares_SP {
+        display: none;
+    }
+
+    .three-squares_PC {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        margin-top: 64px;
+    }
+
+    .sq_PC {
+        position: relative;
+        aspect-ratio: 1 / 1;
+        overflow: hidden;
+    }
+
+    .sq_PC>img {
+        position: absolute;
+        inset: 0;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+
+    .overlay_PC {
+        position: absolute;
+        inset: 0;
+        display: grid;
+        place-items: center;
+        padding: 0 6%;
+        background: rgba(0, 0, 0, .38);
+    }
+
+    .overlay_PC p {
+        margin: 0;
+        color: #fff;
+        text-align: center;
+        line-height: 1.6;
+        font-family: 'FOT-Cezanne ProN', 'Noto Sans JP', Arial, sans-serif;
+        font-size: clamp(1.6rem, 2.0vw, 2.4rem);
+        max-width: 30ch;
+        overflow-wrap: anywhere;
+    }
+
+    #happiness {
+        padding-bottom: 0;
+    }
+
+    .spBr {
+        display: none;
+    }
+}
+
+
+@media (min-width: 768px) {
+    .catch {
+        font-size: 2.4rem;
+    }
+
+    .section--about .section_ttl {
+        margin-top: 0;
+        text-align: left;
+        margin-right: 5.7%;
+        white-space: nowrap;
+    }
+
+    .ttlarea {
+        margin-top: 46px;
+        margin-inline: 10.5%;
+        display: flex;
+        justify-content: left;
+        flex: 0 0 auto;
+    }
+
+    .section_txt {
+        margin: 0;
+    }
+
+    .section_txt p:first-of-type {
+        margin-top: 0;
+    }
+
+    .btnarea_stories {
+        margin-right: 10.5%;
+    }
+
+    .btnarea_stories:hover .btn_stories {
+        color: var(--rightblue);
+    }
+
+    .btnarea_stories:hover .arrow {
+        background-color: var(--rightblue);
+    }
+
+    .about_img {
+        width: 100%;
+        height: 400px;
+        background-image: url(../img/top_interior3.png);
+        background-attachment: fixed;
+        background-size: cover;
+        background-position: center 30%;
+        background-repeat: no-repeat;
+    }
+
+    #happiness {
+        margin-top: 64px;
+    }
+
+    .spBr {
+        display: none;
+    }
+
+    .happiness_txt {
+        text-align: center;
+        color: var(--darkblue);
+        font-family: "Noto Sans JP";
+        font-size: 1.8rem;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 1.6;
+        margin: 0 auto;
+        margin-top: 32px;
+    }
+
+    .goodpoint_ttl {
+        font-size: 2.4rem;
+        padding: 7px 6.7%;
+        margin-top: 64px;
+        margin-inline: clamp(10.5%, 27.5vw, 34.7%);
+        z-index: 2;
+    }
+
+    .goodpoint_contents {
+        font-size: 2rem;
+        padding-top: 0px;
+        margin-top: 18px;
+    }
+
+    .goodpoint_list dt {
+        padding: 14px 1.8% 0;
+    }
+
+    .goodpoint_list dt+dd {
+        padding: 12px 1.8% 12px;
+        background: var(--white);
+    }
+
+    .goodpoint_txt {
+        color: var(--black);
+        font-family: "Noto Sans JP";
+        font-size: 1.8rem;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 1.6;
+    }
+
+    .goodpoint_list {
+        background-color: var(--skyblue);
+        padding: 58px 3.6% 34px;
+        margin-top: -26px;
+        margin-inline: 7.6%;
+        border: 2px solid var(--darkblue);
+        z-index: 1;
+    }
+
+
+    .delicious_ttl {
+        text-align: center;
+        font-size: 2.4rem;
+        margin-top: 96px;
+    }
+
+    .delicious_txt {
+        text-align: center;
+        font-size: 1.8rem;
+        margin-top: 42px;
+    }
+
+    .eat_area {
+        margin-right: 10.5%;
+    }
+
+    .eat {
+        color: var(--darkblue);
+        font-family: "Noto Sans JP";
+        font-size: 2.4rem;
+        font-style: normal;
+        font-weight: 500;
+        line-height: 1.6;
+        text-align: right;
+    }
+
+    .arrow {
+        position: relative;
+        display: inline-block;
+        width: 24px;
+        height: 1px;
+        margin-top: 0px;
+        border-radius: 9999px;
+        background-color: var(--darkblue);
+        transform: translateY(2px);
+    }
+
+    .arrow::after {
+        content: "";
+        position: absolute;
+        top: calc(50% - 1px);
+        right: 0;
+        width: 8px;
+        height: 1px;
+        border-radius: 9999px;
+        background-color: var(--darkblue);
+        transform: rotate(45deg);
+        transform-origin: calc(100% - 1px) 50%;
+    }
+}
+
+/* promises */
+.section--promises {
+    background-image: url(../img/bg_dairiseki_skyblue.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding-top: 96px;
+    padding-inline: 5.3%;
+}
+
+.section_ttl--promises {
+    margin-right: 5.3%;
+    text-align: right;
+    position: relative;
+    margin-top: 0;
+}
+
+.section_ttl--promises .en {
+    position: relative;
+    display: inline-block;
+    padding-left: 14px;
+}
+
+.section_ttl--promises .en::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: -100vw;
+    transform: translateY(-50%);
+    width: calc(100vw - 14px - 5.3%);
+    height: 1px;
+    background-color: var(--darkblue);
+}
+
+.promises_contents {
+    margin: 46px 0 0;
+}
+
+.promises_list {
+    margin-top: 90px;
+}
+
+.promises_list img {
+    display: block;
+    width: 81.7%;
+    max-width: 400px;
+    margin: 0 auto;
+}
+
+.promises_ttl {
+    display: flex;
+    align-items: center;
+    gap: 5.3%;
+    color: var(--darkblue);
+    font-family: "Noto Sans JP";
+    font-size: 1.8rem;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 1.6;
+    margin-top: 24px;
+}
+
+.num {
+    font-size: 3.2rem;
+}
+
+.promises_txt {
+    color: var(--black);
+    font-family: "Noto Sans JP";
+    font-size: 1.6rem;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 1.6;
+    margin-top: 12px;
+}
+
+@media (min-width: 501px) {
+    .promises_contents {
+        margin-bottom: 0;
+        margin-inline: 8.3%;
+    }
+
+}
+
+@media (min-width: 768px) {
+    .section--promises {
+        padding-top: 172px;
+    }
+
+    .section_ttl--promises {
+        margin-right: 5.3%;
+        position: relative;
+        margin-top: 0;
+    }
+
+    .promises_contents {
+        margin-top: 96px;
+    }
+
+    .promises_list {
+        display: flex;
+        margin-top: 64px;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .promises_list img {
+        order: 2;
+        display: block;
+        width: 36.9%;
+        height: auto;
+        margin: 0;
+    }
+
+    .promises_txtarea {
+        order: 3;
+    }
+
+    .promises_txtarea_odd {
+        order: 1;
+        margin-right: 24px;
+    }
+
+    .promises_txtarea_even {
+        margin-left: 34px;
+    }
+
+    .promises_ttl {
+        gap: 0;
+        font-size: 2.4rem;
+        margin-top: 0;
+    }
+
+    .num {
+        font-size: 4.8rem;
+        margin-right: 24px;
+    }
+
+    .promises_txt {
+        font-size: 1.8rem;
+        margin-top: 24px;
+    }
+}
+
+/* Bread&treats */
+.section--product {
+    padding: 64px 0 228px;
+    background-color: #fff;
+    background-image:
+        linear-gradient(to right, rgba(0, 0, 0, 0.03) 1px, transparent 0.75px),
+        linear-gradient(to bottom, rgba(0, 0, 0, 0.03) 1px, transparent 0.75px);
+    background-size: 15px 15px;
+}
+
+.section--product .section_ttl {
+    margin-top: 0;
+}
+
+.section--product h2 {
+    background-color: var(--skyblue);
+    padding: 39px 0 38px;
+    border-radius: 20px;
+    margin-inline: 5.3%;
+}
+
+.tri {
+    display: block;
+    margin: 0 auto;
+    width: 0;
+    height: 0;
+    border-left: 26px solid transparent;
+    border-right: 26px solid transparent;
+    border-top: 28px solid var(--skyblue);
+}
+
+.product_subttl {
+    color: var(--darkblue);
+    text-align: center;
+    font-family: "FOT-Cezanne ProN";
+    font-size: 2.4rem;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+    margin-top: 42px;
+}
+
+.product_subttl::after {
+    content: '';
+    width: 30px;
+    height: 1px;
+    background-color: var(--darkblue);
+    display: block;
+    margin: 8px auto 0;
+}
+
+.product_list {
+    margin-inline: 13.7%;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 12.2%;
+
+}
+
+.product_contents {
+    text-align: center;
+    margin: 32px auto 0;
+}
+
+.product_contents img {
+    display: inline-block;
+}
+
+.product_contents figcaption {
+    color: var(--darkblue);
+    font-family: "Noto Sans JP";
+    font-size: 1.8rem;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 1.6;
+}
+
+.product_btn {
+    margin: 64px auto 0;
+}
+
+@media (min-width: 768px) {
+    .section--product {
+        padding: 116px 5.3% 228px;
+        text-align: center;
+    }
+
+    .section--product h2 {
+        display: inline-block;
+        width: auto;
+        box-sizing: border-box;
+        background-color: var(--skyblue);
+        padding: 39px min(67px, 4.6527778vw) 38px;
+        max-width: 1306px;
+        border-radius: 20px;
+        text-align: center;
+        margin-top: 116px;
+    }
+
+    .tri {
+        display: block;
+        margin: 0 auto;
+        width: 0;
+        height: 0;
+        border-left: 26px solid transparent;
+        border-right: 26px solid transparent;
+        border-top: 28px solid var(--skyblue);
+    }
+
+    .product_subttl {
+        margin-top: 72px;
+    }
+
+    .product_list {
+        margin-inline: 10.5%;
+        /* display: flex; */
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 12.2%;
+        justify-content: space_between;
+        margin-top: 64px;
+    }
+
+    .product_contents {
+        width: 100%;
+        margin: 0;
+    }
+
+    .product_contents figure {
+        text-align: left;
+    }
+
+    .product_contents img {
+        width: 100%;
+        display: block;
+        margin: 0;
+    }
+
+    .product_contents figcaption {
+        font-size: 2.2rem;
+        margin-top: 12px;
+    }
+
+    .product_btn {
+        display: inline-block;
+        margin: 96px auto 0;
+    }
+}
