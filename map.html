@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>そらとこめぱん | MAP</title>
+    <!-- web font -->
+    <script> (function (d) { var config = { kitId: 'qat2ncv', scriptTimeout: 3000, async: true }, h = d.documentElement, t = setTimeout(function () { h.className = h.className.replace(/\bwf-loading\b/g, "") + " wf-inactive"; }, config.scriptTimeout), tk = d.createElement("script"), f = false, s = d.getElementsByTagName("script")[0], a; h.className += " wf-loading"; tk.src = 'https://use.typekit.net/' + config.kitId + '.js'; tk.async = true; tk.onload = tk.onreadystatechange = function () { a = this.readyState; if (f || a && a != "complete" && a != "loaded") return; f = true; clearTimeout(t); try { Typekit.load(config) } catch (e) { } }; s.parentNode.insertBefore(tk, s) })(document); </script>
+    <!-- css -->
+    <link rel="stylesheet" href="css/destyle.css">
+    <link rel="stylesheet" href="css/common.css">
+    <link rel="stylesheet" href="css/map.css">
+</head>
+
+<body>
+    <!-- header -->
+    <header class="header">
+        <div class="header_wrap">
+            <div class="header_area" id="logo">
+                <a href="index.html" class="header_logo_txt">そらとこめぱん</a>
+            </div>
+            <!-- ハンバーガーメニュー部分 -->
+            <div class="btn_hamburger">
+                <!-- ハンバーガーメニューの表示・非表示を切り替えるチェックボックス -->
+                <input id="drawer_input" class="drawer_hidden" type="checkbox" aria-label="メニューを開閉">
+                <!-- ハンバーガーアイコン -->
+                <label for="drawer_input" class="drawer_open"><span></span></label>
+            </div>
+        </div>
+        <!-- nav中身 -->
+        <nav class="nav">
+            <div class="nav_top">
+                <a href="index.html"><img src="img/logo__sorakomepan_blue.png" alt="そらとこめぱんのロゴ" class="nav_logo_blue">
+                    <p class="nav_logo_txt">そらとこめぱん</p>
+                </a>
+            </div>
+            <div class="nav_content">
+                <ul class="nav_list">
+                    <li class="menu_list"><a href="index.html#about">>> ABOUT</a></li>
+                    <li class="menu_list"><a href="stories.html">>> STORIES</a></li>
+                    <li class="menu_list"><a href="index.html#happiness">>> KOMEKO'S HAPPINESS</a></li>
+                    <li class="menu_list"><a href="index.html#promises">>> PROMISES</a></li>
+                    <li class="menu_list"><a href="product.html">>> BREAD & TREATS</a></li>
+                    <li class="menu_list"><a href="lesson.html">>> LESSON</a></li>
+                    <li class="menu_list"><a href="#">>> MAP</a></li>
+                    <li class="menu_list"><a href="contact.html">>> CONTACT</a></li>
+                </ul>
+                <li class="menu_list_btn">オンラインショップ</li>
+                <a class="nav_banner" target="_blank"
+                    href="https://www.instagram.com/soratokomepan?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw=="
+                    target="_blank" rel="noopener">
+                    <p class="nav_btn_txt">店頭販売の日時は<br>インスタをCheck！</p>
+                    <img src="img/nav_instaBtn.png" alt="インスタグラムのアイコン" class="nav_btn_img">
+                </a>
+            </div>
+        </nav>
+    </header>
+
+    <!-- main -->
+    <main class="main">
+        <!-- <div class="top">
+            <p>そらとこめぱん</p>
+        </div> -->
+
+        <section class="section--map">
+            <h1 class="section_ttl">お越しの方へ<br><span class="en">MAP</span></h1>
+            <div class="map_contents">
+                <p class="map_txt">〒475-0041<br class="spBr">愛知県半田市乙川太田町1-61-11</p>
+                <p class="map_txt">JR武豊線「乙川駅」から徒歩約15分/駐車場有</p>
+            </div>
+            <iframe
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1635.9235750090672!2d136.94488515805259!3d34.91028514486348!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x600485003fcdf781%3A0xc5684ad38f7e1475!2z57Gz57KJ44OR44Oz5bel5oi_IOOBneOCieOBqOOBk-OCgeOBseOCkw!5e0!3m2!1sja!2sjp!4v1757503622590!5m2!1sja!2sjp"
+                style="border:0;" allowfullscreen="" loading="lazy"
+                referrerpolicy="no-referrer-when-downgrade"></iframe>
+            <div class="caution_txtarea">
+                <h2 class="caution_ttl">注意事項</h2>
+                <p class="caution_txt">
+                    当店では、通常は店頭での販売を行っておりません。<br>ご購入をご希望の方は、オンラインショップをご利用ください。（オンラインショップでは、配送または店頭受け取りのいずれかをお選びいただけます。）<br>また、不定期ではありますが、店頭販売を行うこともございます。日時はインスタグラムでお知らせしておりますので、ぜひチェックしてみてください。
+                </p>
+            </div>
+            <section class="instagram">
+                <h2 class="instasec_ttl">instagramはこちら</h2>
+                <div class="insta_img">
+                    <a href="https://www.instagram.com/soratokomepan?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw=="
+                        class="insta_link"><img src="img/insta_grid1.jpg" alt=""></a>
+                    <a href="https://www.instagram.com/soratokomepan?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw=="
+                        class="insta_link"><img src="img/insta_grid2.jpg" alt=""></a>
+                    <a href="https://www.instagram.com/soratokomepan?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw=="
+                        class="insta_link"><img src="img/insta_grid3.jpg" alt=""></a>
+                    <a href="https://www.instagram.com/soratokomepan?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw=="
+                        class="insta_link"><img src="img/insta_grid4.jpg" alt=""></a>
+                    <a href="https://www.instagram.com/soratokomepan?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw=="
+                        class="insta_link"><img src="img/insta_grid5.jpg" alt=""></a>
+                    <a href="https://www.instagram.com/soratokomepan?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw=="
+                        class="insta_link"><img src="img/insta_grid6.jpg" alt=""></a>
+                </div>
+            </section>
+        </section>
+    </main>
+    <footer class="footer">
+        <a href="index.html">
+            <p class="footer_ttl">そらとこめぱん</p>
+        </a>
+        <div class="footer_sns">
+            <a href=""><img src="img/nav_cartBtn.png" alt="オンラインストアのボタン" class="footer_btn footer_btn_store"></a>
+            <a
+                href="https://www.instagram.com/soratokomepan?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw=="><img
+                    src="img/nav_instaBtn.png" alt="インスタグラムのボタン" class="footer_btn footer_btn_insta"></a>
+            <a href=""><img src="img/nav_lineBtn.png" alt="ラインのボタン" class="footer_btn footer_btn_line"></a>
+        </div>
+        <p class="copy"><small>&copy; そらとこめぱん All Rights Reserved.</small></p>
+
+    </footer>
+
+</body>
+
+</html>

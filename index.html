@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>そらとこめぱん</title>
+    <!-- web font -->
+    <script>
+        (function (d) { var config = { kitId: 'qat2ncv', scriptTimeout: 3000, async: true }, h = d.documentElement, t = setTimeout(function () { h.className = h.className.replace(/\bwf-loading\b/g, "") + " wf-inactive"; }, config.scriptTimeout), tk = d.createElement("script"), f = false, s = d.getElementsByTagName("script")[0], a; h.className += " wf-loading"; tk.src = 'https://use.typekit.net/' + config.kitId + '.js'; tk.async = true; tk.onload = tk.onreadystatechange = function () { a = this.readyState; if (f || a && a != "complete" && a != "loaded") return; f = true; clearTimeout(t); try { Typekit.load(config) } catch (e) { } }; s.parentNode.insertBefore(tk, s) })(document);
+    </script>
+    <!-- css -->
+    <link rel="stylesheet" href="css/destyle.css">
+    <link rel="stylesheet" href="css/common.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<!-- トップだけ is-home を付与 -->
+
+<body id="top" class="is-home">
+    <div id="container" class="container">
+        <!-- ヘッダー -->
+        <header class="header">
+            <div class="header_wrap">
+                <div class="header_area" id="logo">
+                    <a href="index.html" class="header_logo_txt">そらとこめぱん</a>
+                </div>
+                <!-- ハンバーガーメニュー部分 -->
+                <div class="btn_hamburger">
+                    <!-- ハンバーガーメニューの表示・非表示を切り替えるチェックボックス -->
+                    <input id="drawer_input" class="drawer_hidden" type="checkbox" aria-label="メニューを開閉">
+                    <!-- ハンバーガーアイコン -->
+                    <label for="drawer_input" class="drawer_open"><span></span></label>
+                </div>
+            </div>
+            <!-- nav中身 -->
+            <nav class="nav" aria-label="グローバルナビゲーション">
+                <div class="nav_top">
+                    <a href="#top">
+                        <img src="img/logo__sorakomepan_blue.png" alt="そらとこめぱんのロゴ" class="nav_logo_blue">
+                        <p class="nav_logo_txt">そらとこめぱん</p>
+                    </a>
+                </div>
+                <div class="nav_content">
+                    <ul class="nav_list">
+                        <li class="menu_list"><a href="#about">>> ABOUT</a></li>
+                        <li class="menu_list"><a href="stories.html">>> STORIES</a></li>
+                        <li class="menu_list"><a href="#happiness">>> KOMEKO'S HAPPINESS</a></li>
+                        <li class="menu_list"><a href="#promises">>> PROMISES</a></li>
+                        <li class="menu_list"><a href="product.html">>> BREAD & TREATS</a></li>
+                        <li class="menu_list"><a href="lesson.html">>> LESSON</a></li>
+                        <li class="menu_list"><a href="map.html">>> MAP</a></li>
+                        <li class="menu_list"><a href="contact.html">>> CONTACT</a></li>
+                    </ul>
+                    <a class="menu_list_btn" href="#">オンラインショップ</a>
+                    <a class="nav_banner" target="_blank"
+                        href="https://www.instagram.com/soratokomepan?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw=="
+                        target="_blank" rel="noopener">
+                        <p class="nav_btn_txt">店頭販売の日時は<br>インスタをCheck！</p>
+                        <img src="img/nav_instaBtn.png" alt="インスタグラムのアイコン" class="nav_btn_img">
+                    </a>
+                </div>
+            </nav>
+        </header>
+    </div>
+
+    <div class="main_img_content">
+        <div class="fv">
+            <img src="img/sp_top.png" alt="" class="img_sp_top">
+            <img src="img/pc_top.png" alt="" class="img_pc_top">
+            <div class="fv_logo">
+                <img src="img/logo__sorakomepan_white.png" alt="そらとこめぱんのロゴ" class="main_img_logo">
+                <h1 class="main_img_txt">そらとこめぱん</h1>
+            </div>
+        </div>
+    </div>
+
+    <!-- main -->
+    <main class="main">
+
+        <!-- About -->
+        <section id="about" class="section section--about">
+            <p class="catch">新しいのにどこか懐かしい<br>すっぴん素材の米粉パン</p>
+            <div class="ttlarea">
+                <h2 class="section_ttl">そらとこめぱんとは<br><span class="en">ABOUT</span></h2>
+                <div class="section_txt">
+                    <p>「そらとこめぱん」は、米粉100％でグルテンフリーのパンを主にオンラインで販売している、ちいさなパン工房です。</p>
+                    <p>わたしたちのからだは、毎日の食事でつくられます。<br>だからこそ、使うのはシンプルで身体にやさしい国産素材と、日本古来からの発酵食品。<br>アレルギーのある方や、食事制限のある方にも「おいしいね」と笑顔になっていただきたいから、小麦・乳・卵など特定原材料7品目だけでなく、砂糖も使いません。<br>毎日食べても飽きのこない、素朴でほっとする味わい。
+                    </p>
+                    <p>安心して食べられるパンが、空を見上げたときのようにふっと心を軽くしてくれますように――そんな想いを込めた米粉パンのお店です。</p>
+                </div>
+            </div>
+            <div class="storiesarea_block">
+                <div class="btnarea_stories">
+                    <a href="stories.html" class="btn_stories">STORIES</a>
+                    <p class="arrow"></p>
+                </div>
+            </div>
+            <p class="about_img"></p>
+        </section>
+
+        <!-- happiness -->
+        <section id="happiness" class="section section--happiness">
+            <h2 class="section_ttl">米粉のうれしいポイント<br><span class="en">KOMEKO'S<br class="spBr"> HAPPINESS</span></h2>
+            <p class="happiness_txt">米粉は、毎日の食事を安心で健やかなものにしてくれます。<br>身体にも心にも、うれしいポイントがいっぱいです。</p>
+            <div class="goodpoint">
+                <h3 class="goodpoint_ttl">米粉のいいところ</h3>
+                <dl class="goodpoint_list">
+                    <dt class="goodpoint_contents">おなかにやさしい</dt>
+                    <dd class="goodpoint_txt">
+                        小麦に含まれるグルテンは、人によっては腸に負担をかけてしまうことがあります。<br>米粉はグルテンを含まないため、小麦粉に比べておなかにやさしく、消化ストレスの軽減が期待できます。
+                    </dd>
+                    <dt class="goodpoint_contents">満足感が長持ち</dt>
+                    <dd class="goodpoint_txt">
+                        米粉は消化が緩やかなので食後の満腹感が長く続き、間食を控えることにもつながります。<br>さらに、小麦粉よりも低GIで、血糖値の急な上がり下がりも防いでくれます。</dd>
+                    <dt class="goodpoint_contents">身体の調子が整いやすい</dt>
+                    <dd class="goodpoint_txt">
+                        疲れやすさや肌荒れなど、なんとなく続く不調…。その原因はグルテンかもしれません。<br>グルテンフリーを取り入れることで、からだが軽くなり、調子が整うことがあります。</dd>
+                </dl>
+                <div class="delicious">
+                    <h3 class="delicious_ttl">身体にいい、だけじゃない。</h3>
+                    <p class="delicious_txt">
+                        「パサパサしてそう」「硬くて食べにくそう」そう思われがちな米粉パン。<br>実はもっちりとした食感でやさしい甘みが感じられ、小麦パンとはひと味違うおいしさを楽しめるんです。</p>
+                    <div class="eatarea_block">
+                        <div class="eat_area">
+                            <a target="_blank" href="pdf/sorakome_howtoeat.pdf" class="eat">米粉パンの食べ方</a>
+                            <p class="arrow"></p>
+                        </div>
+                    </div>
+
+                    <div class="three-squares_SP">
+                        <figure class="sq_SP sq1_SP">
+                            <img src="img/fuwamochi_pic.png" alt="" class="img_sq1_SP">
+                            <p>＼米粉ならでは／<br>しあわせのふわっともちもち食感</p>
+                        </figure>
+
+                        <figure class="sq_SP sq2_SP">
+                            <p>噛むほどに感じるやさしい味わい</p>
+                            <img src="img/yasasiiajiwai_pic.png" alt="" class="img_sq2_SP">
+                        </figure>
+
+                        <figure class="sq_SP sq3_SP">
+                            <img src="img/reitou-yakitate_pic.png" alt="" class="img_sq3_SP">
+                            <p>冷凍保存でいつでも<br>自宅で焼き立てのおいしさ</p>
+                        </figure>
+                    </div>
+
+                    <!-- PC -->
+                    <div class="three-squares_PC">
+                        <figure class="sq_PC">
+                            <img src="img/fuwamochi_pic.png" alt="" class="sq_PC1">
+                            <figcaption class="overlay_PC">
+                                <p>＼米粉ならでは／<br>しあわせのふわっと<br>もちもち食感</p>
+                            </figcaption>
+                        </figure>
+
+                        <figure class="sq_PC">
+                            <img src="img/yasasiiajiwai_pic.png" alt="" class="sq_PC2">
+                            <figcaption class="overlay_PC">
+                                <p>噛むほどに感じる<br>やさしい味わい</p>
+                            </figcaption>
+                        </figure>
+
+                        <figure class="sq_PC">
+                            <img src="img/reitou-yakitate_pic.png" alt="" class="sq_PC3">
+                            <figcaption class="overlay_PC">
+                                <p>冷凍保存で<br>いつでも自宅で<br>焼き立てのおいしさ</p>
+                            </figcaption>
+                        </figure>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- promises -->
+        <section id="promises" class="section section--promises">
+            <h2 class="section_ttl section_ttl--promises">そらとこめぱんがこだわること<br><span class="en">PROMISES</span></h2>
+            <ul class="promises_contents">
+                <li class="promises_list promises_list_odd">
+                    <img src="img/promises_01.png" alt="">
+                    <div class="promises_txtarea promises_txtarea_odd">
+                        <h3 class="promises_ttl">
+                            <span class="num" aria-hidden="true">01</span>小麦粉不使用！<br>米粉100％で完全グルテンフリー
+                        </h3>
+                        <p class="promises_txt">100％国産米粉を使用し、小麦粉を一切使いません。<br>小麦アレルギーの方にも安心してお召し上がりいただけます。</p>
+                    </div>
+                </li>
+                <li class="promises_list promises_list_even">
+                    <img src="img/promises_02.png" alt="">
+                    <div class="promises_txtarea promises_txtarea_even">
+                        <h3 class="promises_ttl">
+                            <span class="num" aria-hidden="true">02</span>砂糖も使いません<br>身体への配慮とおいしさを両立！
+                        </h3>
+                        <p class="promises_txt">砂糖を使わず、発酵食品そのままの自然な甘みを生かしました。<br>健康管理にも配慮した、身体にやさしいおいしさです。</p>
+                    </div>
+                </li>
+                <li class="promises_list promises_list_odd">
+                    <img src="img/promises_03.png" alt="">
+                    <div class="promises_txtarea promises_txtarea_odd">
+                        <h3 class="promises_ttl">
+                            <span class="num" aria-hidden="true">03</span>無添加の材料を厳選！<br>気になる添加物も不使用で安心
+                        </h3>
+                        <p class="promises_txt">保存料や着色料などはもちろん、添加物が含まれているドライイーストも使わず、無添加にこだわっています。</p>
+                    </div>
+                </li>
+                <li class="promises_list promises_list_even">
+                    <img src="img/promises_04.png" alt="">
+                    <div class="promises_txtarea promises_txtarea_even">
+                        <h3 class="promises_ttl">
+                            <span class="num" aria-hidden="true">04</span>特定原材料7品目も不使用！<br>アレルギーにも対応しています
+                        </h3>
+                        <p class="promises_txt">小麦・乳・卵などの7大アレルゲンを使用していないため、幅広い方に安心しておいしくお召し上がりいただけます。</p>
+                    </div>
+                </li>
+                <li class="promises_list promises_list_odd">
+                    <img src="img/promises_05.png" alt="">
+                    <div class="promises_txtarea promises_txtarea_odd">
+                        <h3 class="promises_ttl">
+                            <span class="num" aria-hidden="true">05</span>プラスαの栄養で<br>身体にうれしいひと工夫
+                        </h3>
+                        <p class="promises_txt">ミネラル豊富な沖縄産天然塩を使用し、おからパウダーや豆乳を加えています。身体にうれしい栄養素をプラスしました。</p>
+                    </div>
+                </li>
+            </ul>
+        </section>
+
+        <!-- bread&treats -->
+        <section id="products" class="section section--product">
+            <h2 class="section_ttl">米粉パンと米粉のお菓子<br><span class="en">BREAD＆TREATS</span></h2>
+            <div class="tri"></div>
+            <h3 class="product_subttl">期間限定</h3>
+            <ul class="product_list">
+                <li class="product_contents">
+                    <figure>
+                        <img src="img/pan_satumaimo.png" alt="まるで本物？さつまいもぱん">
+                        <figcaption>まるで本物？さつまいもぱん</figcaption>
+                    </figure>
+                </li>
+                <li class="product_contents">
+                    <figure>
+                        <img src="img/pan_pumpkin.png" alt="かぼちゃチーズぱん">
+                        <figcaption>かぼちゃチーズぱん</figcaption>
+                    </figure>
+                </li>
+            </ul>
+            <a href="product.html" class="normal_btn">商品ラインナップはこちら</a>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <a href="index.html">
+            <p class="footer_ttl">そらとこめぱん</p>
+        </a>
+        <div class="footer_sns">
+            <a href=""><img src="img/nav_cartBtn.png" alt="オンラインストアのボタン" class="footer_btn footer_btn_store"></a>
+            <a
+                href="https://www.instagram.com/soratokomepan?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw=="><img
+                    src="img/nav_instaBtn.png" alt="インスタグラムのボタン" class="footer_btn footer_btn_insta"></a>
+            <a href=""><img src="img/nav_lineBtn.png" alt="ラインのボタン" class="footer_btn footer_btn_line"></a>
+        </div>
+        <p class="copy"><small>&copy; そらとこめぱん All Rights Reserved.</small></p>
+    </footer>
+    <script src="https://code.jquery.com/jquery-3.7.0.min.js"
+        integrity="sha256-2Pmvv0kuTBOenSvLm6bvfBSSHrUJ+3A7x6P5Ebd07/g=" crossorigin="anonymous"></script>
+    <script src="js/top.js"></script>
+</body>
+
+</html>
